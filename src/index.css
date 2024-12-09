@@ -1,5 +1,6 @@
 :root {
-  --primary-color: #2aa7ff;
+  --primary-color: #102851;
+  --primary-bg-color: #2aa7ff;
   --secondary-color: #1b3c74;
   --ternary-color: #1b3c74;
   --primary-bg: linear-gradient(
@@ -14,8 +15,35 @@
   box-sizing: border-box;
 }
 .heading {
-  background-color: var(--primary-color);
+  background-color: var(--primary-bg-color);
   color: #ffff;
   padding: 0.7rem;
   text-align: center;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 8rem;
+}
+.nav-left-section{
+
+}
+.nav-right-section{
+display: flex;
+}
+.nav-list{
+    display: flex;
+    gap: 40px;
+    list-style: none;
+   
+   >li{
+       color: var(--primary-color);
+    }
+}
+.my-booking-btn{
+    color: #ffff;
+    background-color: var(--primary-bg-color);
+    border-radius: 5px;
+    padding: 0.6rem 1.2rem;
+    
 }
