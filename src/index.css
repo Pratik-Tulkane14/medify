@@ -2,14 +2,12 @@
   --primary-color: #102851;
   --primary-bg-color: #2aa7ff;
   --secondary-color: #1b3c74;
-  --ternary-color: #1b3c74;
   --primary-bg: linear-gradient(
     81deg,
     #e7f0ff 9.01%,
     rgba(232, 241, 255, 0.47) 89.11%
   );
   --primary-font-color: #5c6169;
-  --secondary-font-color: #5c6169;
 }
 * {
   margin: 0;
@@ -46,13 +44,15 @@ body {
     color: var(--primary-color);
   }
 }
-.my-booking-btn {
+.my-booking-btn,
+.view-all {
   color: #ffff;
   background-color: var(--primary-bg-color);
   border-radius: 5px;
   padding: 0.6rem 1.2rem;
   text-wrap: nowrap;
   font-size: 0.8rem;
+  border-color: transparent;
 }
 
 /* hero section start */
@@ -109,7 +109,7 @@ body {
 }
 #state {
   background-color: #f0f0f0;
-  color: var(--secondary-font-color);
+  color: var(--primary-font-color);
   border: none;
   outline: none;
   outline-color: transparent;
@@ -135,4 +135,104 @@ body {
   color: #ffff;
   background-color: transparent;
   border-color: transparent;
+}
+/* Find by specialisation page */
+.specialisation {
+  padding: 0 8rem;
+  background: var(--primary-bg);
+}
+.specialisation-heading {
+  text-align: center;
+  color: var(--primary-font-color);
+  text-transform: capitalize;
+  padding: 2rem 0rem;
+}
+.find-item-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+}
+.items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffff;
+  height: 180px;
+  width: 290px;
+  border-radius: 5px;
+}
+.items:hover {
+  transition: transform 200ms ease, box-shadow 200ms ease;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transform: scale(1.04);
+}
+
+.img-wrapper {
+  height: 100px;
+  padding: 10px;
+}
+.item-img {
+  height: 100%;
+  width: 100%;
+}
+.details {
+  color: var(--primary-font-color);
+}
+.view-all-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+}
+/* Blog page start */
+.blog-wrapper {
+  padding: 2rem 8rem;
+}
+.blog-main-heading {
+  color: var(--primary-bg-color);
+  font-weight: bold;
+  text-align: center;
+}
+.blog-heading {
+  text-align: center;
+  color: var(--primary-color);
+  text-transform: capitalize;
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding: 1.5rem 0rem;
+}
+.blogs {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.blog-card{
+  width: 364.7px;
+  border-radius: 10px;
+  border:1px solid rgb(201, 201, 201);
+  cursor:pointer
+}
+.cards-wrapper{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+
+}
+.details{
+  display: flex;
+  gap: 20px;
+}
+.blog-details{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.blog-title,
+.blog-author{
+  color: var(--primary-font-color);
+  font-weight: 500;
 }
