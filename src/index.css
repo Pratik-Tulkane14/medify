@@ -187,6 +187,45 @@ body {
   justify-content: center;
   padding-top: 2rem;
 }
+.patient-caring {
+  background: var(--primary-bg);
+  display: flex;
+  gap: 6rem;
+  padding: 4rem 8rem;
+}
+.patient-heading {
+  color: var(--primary-bg-color);
+}
+.patient-sub-heading {
+  font-size: 2.8rem;
+  color: var(--primary-color);
+}
+.highlight {
+  margin-left: 1rem;
+  color: var(--primary-bg-color);
+}
+.goal{
+  color: var(--primary-font-color);
+}
+.points {
+  list-style: none;
+  align-items: center;
+}
+.points li{
+  color: var(--primary-color);
+    padding: 0.8rem 0;
+
+}
+.points li::before{
+  content: '';
+  background-repeat:no-repeat ;
+  background-size :contain ;
+  background-image: url('/check.png');
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+  padding: 0 0.3rem;
+}
 /* Blog page start */
 .blog-wrapper {
   padding: 2rem 8rem;
@@ -235,11 +274,19 @@ body {
   color: var(--primary-font-color);
   font-weight: 500;
 }
+/* Our Medical Specialist section start here */
+.heading-sepcial {
+  text-align: center;
+  color: var(--secondary-color);
+  text-transform: capitalize;
+  padding: 2rem 0rem;
+  font-size: 2rem;
+}
+
 /* Footer section start here */
 .footer-wrapper {
   background: var(--primary-color);
-    padding: 5rem 8rem;
-
+  padding: 5rem 8rem;
 }
 .footer {
   display: grid;
@@ -285,5 +332,4 @@ body {
   padding-top: 3rem;
   margin-top: 3rem;
   color: #fff;
-
 }
