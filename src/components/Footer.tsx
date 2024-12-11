@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
                     <FooterLinks />
                 </div>
             </div>
-                <div className="">
+            <div className="right-reserve-wrapper">
 
                     <p className="right-reserve">Copyright ©2023 Surya Nursing Home.com. All Rights Reserved</p>
                 </div>

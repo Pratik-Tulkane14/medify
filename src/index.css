@@ -238,11 +238,12 @@ body {
 /* Footer section start here */
 .footer-wrapper {
   background: var(--primary-color);
+    padding: 5rem 8rem;
+
 }
 .footer {
   display: grid;
-  grid-template-columns: 1.2fr repeat(3, 1fr);
-  padding: 2rem 8rem;
+  grid-template-columns: 1.5fr repeat(3, 1fr);
 }
 .first-section {
   display: flex;
@@ -280,7 +281,9 @@ body {
   padding: 0px 0.3rem;
 }
 .right-reserve {
+  border-top: 1px solid #314f82;
+  padding-top: 3rem;
+  margin-top: 3rem;
   color: #fff;
-    padding: 0rem 8rem;
 
 }
