@@ -1,4 +1,5 @@
-import Blog from "./components/Blog"
+// import Blog from "./components/Blog"
+import Footer from "./components/Footer"
 import Hero from "./components/Hero"
 import Navbar from "./components/Navbar"
 import Notice from "./components/Notice"
@@ -12,7 +13,8 @@ function App() {
      <Navbar/>
      <Hero/>
      {/* <Specialisation/> */}
-     <Blog/>
+     {/* <Blog/> */}
+     <Footer/>
     </>
   )
 }
