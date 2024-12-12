@@ -5,7 +5,7 @@ const PatientCaring: React.FC = () => {
             <div className="">
                 <img src={freecancelation} alt="free cancelation img" />
             </div>
-            <div className="">
+            <div className="patient-container">
                 <p className='patient-heading'>HELPING PATIENTS FROM AROUND THE GLOBE!!</p>
                 <h1 className='patient-sub-heading'>
                     Patient

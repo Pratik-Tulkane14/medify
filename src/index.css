@@ -53,6 +53,7 @@ body {
   text-wrap: nowrap;
   font-size: 0.8rem;
   border-color: transparent;
+  cursor: pointer;
 }
 
 /* hero section start */
@@ -185,13 +186,16 @@ body {
 .view-all-wrapper {
   display: flex;
   justify-content: center;
-  padding-top: 2rem;
+  padding: 2rem 0;
 }
 .patient-caring {
   background: var(--primary-bg);
   display: flex;
   gap: 6rem;
   padding: 4rem 8rem;
+}
+.patient-container{
+  padding-top: 4rem;
 }
 .patient-heading {
   color: var(--primary-bg-color);
