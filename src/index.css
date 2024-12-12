@@ -8,6 +8,7 @@
     rgba(232, 241, 255, 0.47) 89.11%
   );
   --primary-font-color: #5c6169;
+  --secondary-font-color: #77829D;
 }
 * {
   margin: 0;
@@ -194,7 +195,7 @@ body {
   gap: 6rem;
   padding: 4rem 8rem;
 }
-.patient-container{
+.patient-container {
   padding-top: 4rem;
 }
 .patient-heading {
@@ -208,23 +209,22 @@ body {
   margin-left: 1rem;
   color: var(--primary-bg-color);
 }
-.goal{
+.goal {
   color: var(--primary-font-color);
 }
 .points {
   list-style: none;
   align-items: center;
 }
-.points li{
+.points li {
   color: var(--primary-color);
-    padding: 0.8rem 0;
-
+  padding: 0.8rem 0;
 }
-.points li::before{
-  content: '';
-  background-repeat:no-repeat ;
-  background-size :contain ;
-  background-image: url('/check.png');
+.points li::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("/check.png");
   display: inline-block;
   height: 18px;
   width: 18px;
@@ -277,6 +277,68 @@ body {
 .blog-author {
   color: var(--primary-font-color);
   font-weight: 500;
+}
+/* Our famalies section start  */
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 5px;
+}
+.service-count {
+  color: var(--primary-color);
+}
+.service-cardName {
+  color: var(--primary-font-color);
+}
+/* Families section start here */
+
+.families-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  align-items: center;
+  justify-content: left;
+  padding: 3rem 8rem;
+  background: var(--primary-bg);
+}
+.families-left {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  gap: 30px;
+}
+.families-right {
+  display: flex;
+  gap: 30px;
+}
+.inner-left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.inner-right {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.inner-right:last-child {
+  margin-top: 4rem;
+}
+.families-heading {
+  color: var(--primary-bg-color);
+  font-weight: 600;
+}
+.families-sub-heading {
+  color: var(--secondary-color);
+}
+.families-details{
+  color: var(--secondary-font-color);
+  line-height: 2.2;
 }
 /* Our Medical Specialist section start here */
 .heading-sepcial {

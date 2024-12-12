@@ -1,4 +1,5 @@
 import Blog from "./components/Blog"
+import Families from "./components/Families"
 import Footer from "./components/Footer"
 import Hero from "./components/Hero"
 import MedicalSpecialist from "./components/MedicalSpecialist"
@@ -14,10 +15,11 @@ function App() {
       <Notice />
       <Navbar />
       <Hero />
-      <Specialisation/>
-      <Blog/>
+      <Specialisation />
+      <Blog />
+      <Families />
       <MedicalSpecialist />
-      <PatientCaring/>
+      <PatientCaring />
       <Footer />
     </>
   )

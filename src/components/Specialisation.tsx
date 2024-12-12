@@ -1,4 +1,3 @@
-import React from 'react'
 import drugstore from "/Drugstore.png"
 import heartRate from "/HeartRate.png"
 import stethoscope from "/stethoscope.png"
