@@ -8,7 +8,7 @@
     rgba(232, 241, 255, 0.47) 89.11%
   );
   --primary-font-color: #5c6169;
-  --secondary-font-color: #77829D;
+  --secondary-font-color: #77829d;
 }
 * {
   margin: 0;
@@ -118,6 +118,10 @@ body {
   padding: 0.7rem 1rem;
   width: 12rem;
 }
+/* Swipper section start */
+/* .swipper-wrapper{
+  padding: 2rem 8rem;
+} */
 /* Icon button start */
 .button-wrapper {
   display: flex;
@@ -139,6 +143,21 @@ body {
   border-color: transparent;
 }
 /* Find by specialisation page */
+.custom-swipper-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* gap: 10px; */
+}
+.doctor-name {
+  color: var(--primary-font-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+.post {
+  color: var(--primary-bg-color);
+}
 .specialisation {
   padding: 0 8rem;
   background: var(--primary-bg);
@@ -336,7 +355,7 @@ body {
 .families-sub-heading {
   color: var(--secondary-color);
 }
-.families-details{
+.families-details {
   color: var(--secondary-font-color);
   line-height: 2.2;
 }
@@ -347,6 +366,10 @@ body {
   text-transform: capitalize;
   padding: 2rem 0rem;
   font-size: 2rem;
+}
+.medical-staff {
+  /* background-color: red; */
+  padding: 0rem 1rem;
 }
 
 /* Footer section start here */
@@ -398,4 +421,56 @@ body {
   padding-top: 3rem;
   margin-top: 3rem;
   color: #fff;
+}
+/* Swipper code  */
+.swipper-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: var(--swiper-pagination-bottom, 8px);
+  top: 431px !important;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+/* Media query start here */
+@media only screen and (max-width: 1024px) {
+  .footer-wrapper {
+    padding: 2rem 3rem;
+  }
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .first-section {
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .links > li {
+    padding-left: 0;
+  }
+  .right-reserve {
+    padding-top: 1rem;
+    margin-top: 1rem;
+    color: #fff;
+  }
+  .footer-wrapper {
+    padding: 2rem 1rem;
+  }
+  .first-section {
+    height: 95px;
+    margin-bottom: 30px;
+  }
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

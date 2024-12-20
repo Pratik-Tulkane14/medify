@@ -1,30 +1,39 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+import offer1 from "/offer1.png";
+import offer2 from "/offer2.png";
+import offer3 from "/offer3.png";
 // Import Swiper styles
-import 'swiper/css';
+import "swiper/css";
+
 import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import 'swiper/css/autoplay';
-
-
-// import required modules
 import { Pagination } from 'swiper/modules';
 const CustomSwipper = () => {
   return (
-    <>
-          <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
-              <SwiperSlide>Slide 1</SwiperSlide>
-              <SwiperSlide>Slide 2</SwiperSlide>
-              <SwiperSlide>Slide 3</SwiperSlide>
-              <SwiperSlide>Slide 4</SwiperSlide>
-              <SwiperSlide>Slide 5</SwiperSlide>
-              <SwiperSlide>Slide 6</SwiperSlide>
-              <SwiperSlide>Slide 7</SwiperSlide>
-              <SwiperSlide>Slide 8</SwiperSlide>
-              <SwiperSlide>Slide 9</SwiperSlide>
-          </Swiper>
-    </>
-  )
-}
+    <div className="custom-swipper-wrapper">
+      <Swiper
+        pagination={true}
+        modules={[Pagination]}
+        spaceBetween={50}
+        slidesPerView={4}
+        onSlideChange={() => console.log("slide change")}
+        onSwiper={(swiper) => console.log(swiper)}
+      >
+        <SwiperSlide>
+          <img className="offer" src={offer1} alt="offer1" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img className="offer" src={offer2} alt="offer2" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img className="offer" src={offer3} alt="offer3" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img className="offer" src={offer1} alt="offer1" />
+        </SwiperSlide>
+      </Swiper>
+    </div>
+  );
+};
 
-export default CustomSwipper
+export default CustomSwipper;
