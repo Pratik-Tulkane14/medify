@@ -17,14 +17,35 @@
 }
 body {
   font-family: "Poppins", sans-serif;
+  max-width: 1920px;
+  margin: auto;
 }
-.heading {
+.scroll-container {
+  overflow: hidden;
+  width: 100%;
   background-color: var(--primary-bg-color);
+}
+
+.scroll-text {
   color: #ffff;
   padding: 0.7rem;
   text-align: center;
   font-size: 0.9rem;
+  white-space: nowrap;
 }
+
+.scroll-text:hover {
+  animation-play-state: paused;
+}
+@keyframes scroll {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -192,10 +213,6 @@ body {
   transform: scale(1.04);
 }
 
-.img-wrapper {
-  height: 100px;
-  padding: 10px;
-}
 .item-img {
   height: 100%;
   width: 100%;
@@ -439,38 +456,103 @@ body {
   width: 100%;
   z-index: 9999;
 }
-
 /* Media query start here */
-@media only screen and (max-width: 1024px) {
+@media (max-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+.families-right {
+    flex-direction: column;
+    align-items: center;
+  }
+  .inner-right:last-child {
+    margin-top: 0rem;
+  }
   .footer-wrapper {
-    padding: 2rem 3rem;
+    padding: 1rem;
   }
+
   .footer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
+
   .first-section {
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
+  }
+
+  .right-reserve {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+  }
+  .patient-caring {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 20px;
+  }
+  .img-wrapper {
+    > img {
+      width: 10rem;
+    }
   }
 }
-@media only screen and (max-width: 600px) {
-  .links > li {
-    padding-left: 0;
+@media (max-width: 768px) {
+}
+@media (max-width: 1024px) {
+  .families-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 3rem 1rem;
   }
-  .right-reserve {
+  .families-right{
+    justify-content: center;
+  }
+  
+  .patient-container {
     padding-top: 1rem;
-    margin-top: 1rem;
-    color: #fff;
+  }
+  .patient-caring {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 20px;
+  }
+  .img-wrapper {
+    > img {
+      width: 19rem;
+    }
+  }
+  .scroll-text {
+    animation: scroll 20s linear infinite;
   }
   .footer-wrapper {
     padding: 2rem 1rem;
   }
-  .first-section {
-    height: 95px;
-    margin-bottom: 30px;
-  }
+
   .footer {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .first-section {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Default (Mobile-first) */
+body {
+  font-size: 14px;
+}
+
+/* Tablets */
+@media (min-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/* Large Monitors */
+@media (min-width: 1440px) {
+  body {
+    font-size: 20px;
   }
 }

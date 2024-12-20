@@ -2,7 +2,7 @@ import freecancelation from '/freecancelation.png';
 const PatientCaring: React.FC = () => {
     return (
         <div className='patient-caring'>
-            <div className="">
+            <div className="img-wrapper">
                 <img src={freecancelation} alt="free cancelation img" />
             </div>
             <div className="patient-container">

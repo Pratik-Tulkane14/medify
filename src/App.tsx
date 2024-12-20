@@ -1,5 +1,5 @@
 import Blog from "./components/Blog"
-import CustomSwipper from "./components/CustomSwipper"
+// import CustomSwipper from "./components/CustomSwipper"
 import Families from "./components/Families"
 import Footer from "./components/Footer"
 import Hero from "./components/Hero"
@@ -14,15 +14,15 @@ function App() {
 
   return (
     <>
-      {/* <Notice />
-      <Navbar />
-      <Hero />
-      <Offers />
-      <Specialisation />
-      <Blog />
+      <Notice />
+      {/* <Navbar /> */}
+      {/* <Hero /> */}
+      {/* <Offers /> */}
+      {/* <Specialisation /> */}
+      {/* <Blog /> */}
       <Families />
-      <MedicalSpecialist />
-      <PatientCaring /> */}
+      {/* <MedicalSpecialist /> */}
+      <PatientCaring />
       <Footer />
     </>
   )

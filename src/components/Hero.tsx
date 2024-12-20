@@ -19,7 +19,6 @@ const Hero: React.FC = () => {
           <img src={hero} className='hero-img' alt="hero image" />
         </div>
       </div>
-      {/* <Search/> */}
       </>
   )
 }

@@ -4,10 +4,17 @@ import youtube from "/youtube.png";
 import pintrest from "/pintrest.png";
 import faceBook from "/fb.png";
 import FooterLinks from "./FooterLinks";
+import FooterLinksSecond from "./FooterLinksSecond";
 
 const Footer: React.FC = () => {
+    const socialMediaLinks = [
+        { src: faceBook, alt: "Facebook", link: "https://facebook.com" },
+        { src: x, alt: "Twitter", link: "https://twitter.com" },
+        { src: youtube, alt: "YouTube", link: "https://youtube.com" },
+        { src: pintrest, alt: "Pinterest", link: "https://pinterest.com" },
+    ];
     return (
-        <div className="footer-wrapper">
+        <footer className="footer-wrapper">
             <div className="footer">
                 <div className="first-section">
 
@@ -15,33 +22,41 @@ const Footer: React.FC = () => {
                         <img className="footer-brand-logo" src={brandLogo} alt="Brand Logo" />
                     </div>
                     <div className="media-links">
-                        <img src={faceBook} alt="Facebook" />
-                        <img src={x} alt="X" />
-                        <img src={youtube} alt="Youtube" />
-                        <img src={pintrest} alt="Pintrest" />
+                        {socialMediaLinks.map((icon) => (
+                            <a
+                                href={icon.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={`Visit us on ${icon.alt}`}
+                                key={icon.alt}
+                            >
+                                <img src={icon.src} alt={icon.alt} />
+                            </a>
+                        )
+                        )}
                     </div>
                 </div>
                 <div className="item">
                     <FooterLinks />
                 </div>
                 <div className="item">
-                    <ul className="links">
+                    <FooterLinksSecond/>
+                    {/* <ul className="links">
                         <li>Orthology</li>
                         <li>Neurology</li>
                         <li>Dental Care</li>
                         <li>Opthalmology</li>
                         <li>Cardiology</li>
-                    </ul>
+                    </ul> */}
                 </div>
                 <div className="item">
                     <FooterLinks />
                 </div>
             </div>
             <div className="right-reserve-wrapper">
-
-                    <p className="right-reserve">Copyright ©2023 Surya Nursing Home.com. All Rights Reserved</p>
-                </div>
-        </div>
+                <p className="right-reserve">Copyright ©2023 Surya Nursing Home.com. All Rights Reserved</p>
+            </div>
+        </footer>
     );
 };
 
