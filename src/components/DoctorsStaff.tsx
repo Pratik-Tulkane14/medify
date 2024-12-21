@@ -1,81 +1,64 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import person1 from "/person1.png";
-import person2 from "/person2.png";
-import person3 from "/person3.png";
 // Import Swiper styles
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import doctorsData from "../constants/doctorsData";
 
 const DoctorsStaff: React.FC = () => {
+
     return (
         <div>
             <Swiper
                 // className="mySwiper"
-                // centeredSlides={true}
+                centeredSlides={true}
                 autoplay={{
                     delay: 2500,
                     disableOnInteraction: false,
                 }}
-                pagination={{
-                    clickable: true,
-                }}
+                // pagination={{
+                //     clickable: true,
+                // }}
                 // pagination={true}
                 modules={[Autoplay, Pagination, Navigation]}
                 spaceBetween={100}
                 slidesPerView={4}
-                // onSlideChange={() => console.log("slide change")}
-                // onSwiper={(swiper) => console.log(swiper)}
+                breakpoints={{
+                    // when window width is >= 320px
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 100
+                    },
+                    // when window width is >= 480px
+                    480: {
+                        slidesPerView: 1,
+                        spaceBetween: 20
+                    },
+                    // when window width is >= 768px
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 30
+                    },
+                    // when window width is >= 1024px
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 0
+                    }
+                }}
             >
-                <SwiperSlide>
-                    <div className="swipper-wrapper">
+                {doctorsData.map((item, index) => {
+                    return (
+                        <SwiperSlide key={index}>
+                            <div className="swipper-wrapper">
 
-                        <img className="person" src={person1} alt="person1" />
-                        <h5 className="doctor-name">Dr. Ahmad Khan</h5>
-                        <p className="post">Neurologist</p>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="swipper-wrapper">
-
-                        <img className="person" src={person2} alt="person2" />
-                        <h5 className="doctor-name">Dr. Heena Sachdeva</h5>
-                        <p className="post">Orthopadics</p>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="swipper-wrapper">
-
-                        <img className="person" src={person3} alt="person3" />
-                        <h5 className="doctor-name">Dr. Ankur Sharma</h5>
-                        <p className="post">Medicine</p>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="swipper-wrapper">
-
-                        <img className="person" src={person1} alt="person1" />
-                        <h5 className="doctor-name">Dr. Ahmad Khan</h5>
-                        <p className="post">Neurologist</p>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="swipper-wrapper">
-
-                        <img className="person" src={person2} alt="person2" />
-                        <h5 className="doctor-name">Dr. Heena Sachdeva</h5>
-                        <p className="post">Orthopadics</p>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="swipper-wrapper">
-
-                        <img className="person" src={person3} alt="person3" />
-                        <h5 className="doctor-name">Dr. Ankur Sharma</h5>
-                        <p className="post">Medicine</p>
-                    </div>
-                </SwiperSlide>
+                                <img className="person" src={item.image} alt="person2" />
+                                <h5 className="doctor-name">{item["dr-name"]}</h5>
+                                <p className="post">{item.post}</p>
+                            </div>
+                        </SwiperSlide>
+                    )
+                })}
             </Swiper>
         </div>
     )

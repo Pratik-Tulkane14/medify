@@ -1,36 +1,53 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import offer1 from "/offer1.png";
-import offer2 from "/offer2.png";
-import offer3 from "/offer3.png";
 // Import Swiper styles
 import "swiper/css";
-
 import 'swiper/css/pagination';
-import { Pagination } from 'swiper/modules';
-const CustomSwipper = () => {
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import offersData from "../constants/offersData";
+const CustomSwipper: React.FC = () => {
   return (
     <div className="custom-swipper-wrapper">
       <Swiper
+        className="mySwiper"
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        spaceBetween={30} // Reduced from 100 for better mobile layout
         pagination={true}
-        modules={[Pagination]}
-        spaceBetween={50}
-        slidesPerView={4}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
+        modules={[Autoplay, Pagination, Navigation]}
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20
+          },
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20
+          },
+          768: {
+            slidesPerView: 1,
+            spaceBetween: 100
+          },
+          1024: {
+            slidesPerView: 2,
+            spaceBetween: 100
+          },
+          1200: {
+            slidesPerView: 3,
+            spaceBetween: 150
+          }
+        }}
       >
-        <SwiperSlide>
-          <img className="offer" src={offer1} alt="offer1" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className="offer" src={offer2} alt="offer2" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className="offer" src={offer3} alt="offer3" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className="offer" src={offer1} alt="offer1" />
-        </SwiperSlide>
+        {offersData.map((item, index) => (
+          <SwiperSlide key={index}>
+            <div className="swipper-wrapper">
+              <img className="offer" src={item.offerImage} alt={`offer-${index + 1}`} />
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );

@@ -11,51 +11,51 @@ const Specialisation = () => {
             <h2 className='specialisation-heading'>Find by specialisation</h2>
             <div className="find-item-wrapper">
                 <div className="items">
-                    <div className="img-wrapper">
+                    <div className="icons-img-wrapper">
 
                         <img src={drugstore} className="item-img" alt="Drugstore image" />
                     </div>
                     <p className='details'>Dentistry</p>
                 </div>
                 <div className="items">
-                    <div className="img-wrapper">
+                    <div className="icons-img-wrapper">
 
                         <img src={stethoscope} className="item-img" alt="Stethoscope image" />
                     </div>
                     <p className='details'>Primary Care</p>
                 </div>
                 <div className="items">
-                    <div className="img-wrapper">
+                    <div className="icons-img-wrapper">
                         <img src={heartRate} className="item-img" alt="HeartRate image" />
                     </div>
                     <p className='details'>Cardiology</p>
                 </div>
                 <div className="items">
-                    <div className="img-wrapper">
+                    <div className="icons-img-wrapper">
                         <img src={heartRateMonitor} className="item-img" alt="HeartRateMonitor image" />
                     </div>
                     <p className='details'>Dentistry</p>
                 </div>
                 <div className="items">
-                    <div className="img-wrapper">
+                    <div className="icons-img-wrapper">
                         <img src={capsule} className="item-img" alt="capsule image" />
                     </div>
                     <p className='details'>Dentistry</p>
                 </div>
                 <div className="items">
-                    <div className="img-wrapper">
+                    <div className="icons-img-wrapper">
                         <img src={q} className="item-img" alt="quality image" />
                     </div>
                     <p className='details'>Dentistry</p>
                 </div>
                 <div className="items">
-                    <div className="img-wrapper">
+                    <div className="icons-img-wrapper">
                         <img src={drugstore} className="item-img" alt="Drugstore image" />
                     </div>
                     <p className='details'>Dentistry</p>
                 </div>
                 <div className="items">
-                    <div className="img-wrapper">
+                    <div className="icons-img-wrapper">
                         <img src={Xray} className="item-img" alt="Xray image" />
                     </div>
                     <p className='details'>Dentistry</p>
