@@ -279,20 +279,27 @@ body {
   text-align: center;
   color: var(--primary-color);
   text-transform: capitalize;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
   padding: 1.5rem 0rem;
 }
 .blogs {
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   gap: 20px;
-  justify-content: center;
+  align-items: center;
+  padding: 1rem;
 }
 .blog-card {
-  width: 364.7px;
+  max-width: 350px;
   border-radius: 10px;
   border: 1px solid rgb(201, 201, 201);
   cursor: pointer;
+  > img {
+    min-width: 310px;
+    max-width: 100%;
+  }
 }
 .cards-wrapper {
   padding: 1rem;
@@ -385,7 +392,6 @@ body {
   font-size: 2rem;
 }
 .medical-staff {
-  /* background-color: red; */
   padding: 0rem 1rem;
 }
 
@@ -461,7 +467,10 @@ body {
   body {
     font-size: 18px;
   }
-.families-right {
+  .blog-wrapper {
+    padding: 2rem 1rem;
+  }
+  .families-right {
     flex-direction: column;
     align-items: center;
   }
@@ -504,10 +513,10 @@ body {
     grid-template-columns: repeat(1, 1fr);
     padding: 3rem 1rem;
   }
-  .families-right{
+  .families-right {
     justify-content: center;
   }
-  
+
   .patient-container {
     padding-top: 1rem;
   }
@@ -548,11 +557,40 @@ body {
   body {
     font-size: 16px;
   }
+  .blogs {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .blogs-card > img {
+    width: 100%;
+  }
 }
 
+@media (max-width: 992px) {
+  .patient-caring {
+    gap: 2rem;
+    padding: 4rem 2rem;
+  }
+}
+@media (max-width: 1235px) {
+  .patient-caring {
+    gap: 2rem;
+    padding: 4rem 5rem;
+  }
+}
 /* Large Monitors */
 @media (min-width: 1440px) {
   body {
     font-size: 20px;
+  }
+  .blogs {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  .blog-card {
+    max-width: 364.7px;
+    
   }
 }

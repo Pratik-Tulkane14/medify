@@ -19,7 +19,7 @@ function App() {
       {/* <Hero /> */}
       {/* <Offers /> */}
       {/* <Specialisation /> */}
-      {/* <Blog /> */}
+      <Blog />
       <Families />
       {/* <MedicalSpecialist /> */}
       <PatientCaring />
