@@ -1,5 +1,7 @@
 import Blog from "./components/Blog"
+import Download from "./components/Download"
 import Families from "./components/Families"
+import Faq from "./components/Faq"
 import Footer from "./components/Footer"
 import Hero from "./components/Hero"
 import MedicalSpecialist from "./components/MedicalSpecialist"
@@ -20,8 +22,10 @@ function App() {
       <Specialisation />
       <Blog />
       <Families />
+      <Faq />
       <MedicalSpecialist />
       <PatientCaring />
+      <Download />
       <Footer />
     </>
   )

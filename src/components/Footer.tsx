@@ -41,20 +41,13 @@ const Footer: React.FC = () => {
                 </div>
                 <div className="item">
                     <FooterLinksSecond/>
-                    {/* <ul className="links">
-                        <li>Orthology</li>
-                        <li>Neurology</li>
-                        <li>Dental Care</li>
-                        <li>Opthalmology</li>
-                        <li>Cardiology</li>
-                    </ul> */}
                 </div>
                 <div className="item">
                     <FooterLinks />
                 </div>
             </div>
             <div className="right-reserve-wrapper">
-                <p className="right-reserve">Copyright ©2023 Surya Nursing Home.com. All Rights Reserved</p>
+                <p className="right-reserve">Copyright ©2024 Surya Nursing Home.com. All Rights Reserved</p>
             </div>
         </footer>
     );

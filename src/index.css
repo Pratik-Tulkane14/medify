@@ -392,7 +392,85 @@ body {
 .medical-staff {
   padding: 0rem 1rem;
 }
-
+/* Download section start here */
+.left-download-section {
+  display: none;
+}
+.right-download-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.download-wrapper {
+  background: var(--primary-bg);
+  display: flex;
+  flex-direction: column;
+  padding: 0rem 1rem;
+  align-items: center;
+  gap: 5rem;
+}
+.download-heading {
+  color: var(--primary-color);
+  font-size: 2rem;
+}
+.medify {
+  color: var(--primary-bg-color);
+  margin-right: 0.5rem;
+  font-size: 1em;
+}
+.get-app {
+  color: var(--primary-color);
+  font-weight: semi-bold;
+}
+.ph-number-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.input-wrapper {
+  display: flex;
+}
+.country-code {
+  padding: 0.88rem;
+  text-align: center;
+  background-color: #fff;
+  border-right: 3px solid #f2f7ff;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.ph-input-box {
+  outline-color: transparent;
+  border-color: transparent;
+  height: 3rem;
+  width: 15rem;
+  padding: 0 10px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.send-btn {
+  color: #ffff;
+  background-color: var(--primary-bg-color);
+  border-radius: 5px;
+  padding: 0.88rem 1.2rem;
+  text-wrap: nowrap;
+  font-size: 0.9rem;
+  font-weight: semi-bold;
+  border-color: transparent;
+  cursor: pointer;
+}
+.download-links {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  >img{
+    cursor: pointer;
+  }
+}
 /* Footer section start here */
 .footer-wrapper {
   background: var(--primary-color);
@@ -407,6 +485,9 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: 145px;
+}
+.footer-brand-logo{
+  cursor: pointer;
 }
 .media-links {
   display: flex;
@@ -460,14 +541,60 @@ body {
   width: 100%;
   z-index: 9999;
 }
+/* FAQ section start here  */
+.faq-wrapper {
+  padding: 2rem 1rem;
+}
+.faq-heading {
+  color: var(--primary-bg-color);
+  font-weight: 600;
+  text-align: center;
+}
+.faq-sub-heading {
+  text-align: center;
+  color: var(--secondary-color);
+  text-transform: capitalize;
+  padding: 1rem 0rem;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.faq-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.left-section > img {
+  width: 90vw;
+}
+.faqs {
+  list-style-type: none;
+  > li {
+    font-weight: bold;
+    color: var(--secondary-color);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  ::after {
+    content: "";
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 17px;
+    width: 17px;
+    background: url("/plus.svg");
+    margin-left: 8px;
+  }
+}
 /* Media query start here */
 @media only screen and (max-width: 600px) {
   body {
     font-size: 18px;
   }
-    .custom-swipper-wrapper {
-  padding: 1rem 2rem;
-}
+  .custom-swipper-wrapper {
+    padding: 1rem 2rem;
+  }
   .find-item-wrapper {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -515,9 +642,12 @@ body {
   body {
     font-size: 16px;
   }
-   .custom-swipper-wrapper {
-  padding: 1rem 2rem;
-}
+  .left-section > img {
+    width: 400px;
+  }
+  .custom-swipper-wrapper {
+    padding: 1rem 2rem;
+  }
   .specialisation {
     padding: 0 8rem;
   }
@@ -532,14 +662,49 @@ body {
   .blogs-card > img {
     width: 100%;
   }
+
+  .right-download-section {
+    align-items: flex-start;
+  }
+  .download-heading {
+    font-size: 3rem;
+  }
+  .get-app {
+    font-size: 1.3rem;
+  }
+  .download-links,
+  .ph-number-wrapper {
+    flex-direction: row;
+  }
 }
 @media only screen and (min-width: 768px) {
+  .faq-section {
+    flex-direction: row;
+    gap: 70px;
+    justify-content: center;
+  }
+  .faqs {
+    > li {
+      padding: 1.6rem;
+    }
+  }
+  .faq-heading {
+    font-size: 1rem;
+  }
+  .faq-sub-heading {
+    font-size: 2rem;
+  }
+  .download-wrapper {
+    flex-direction: row;
+    justify-content: center;
+  }
+ 
 }
 
 @media only screen and (min-width: 992px) {
   .custom-swipper-wrapper {
-  padding: 2rem 6.5rem;
-}
+    padding: 2rem 6.5rem;
+  }
   .patient-caring {
     gap: 2rem;
     padding: 4rem 2rem;
@@ -596,6 +761,9 @@ body {
   }
   .img-wrapper {
     height: 480px;
+  }
+     .left-download-section {
+    display: block;
   }
 }
 /* Large Monitors */
