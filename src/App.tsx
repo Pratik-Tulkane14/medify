@@ -4,6 +4,7 @@ import Families from "./components/Families"
 import Faq from "./components/Faq"
 import Footer from "./components/Footer"
 import Hero from "./components/Hero"
+import Hospitals from "./components/Hospitals"
 import MedicalSpecialist from "./components/MedicalSpecialist"
 import Navbar from "./components/Navbar"
 import Notice from "./components/Notice"
@@ -17,8 +18,9 @@ function App() {
     <>
       <Notice />
       <Navbar />
-      <Hero />
-      <Offers />
+      {/* <Hero /> */}
+      <Hospitals/>
+      {/* <Offers />
       <Specialisation />
       <Blog />
       <Families />
@@ -26,7 +28,7 @@ function App() {
       <MedicalSpecialist />
       <PatientCaring />
       <Download />
-      <Footer />
+      <Footer /> */}
     </>
   )
 }

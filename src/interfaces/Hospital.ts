@@ -1,0 +1,31 @@
+ interface Hospital {
+    "Provider ID": number;
+    "Hospital Name": string;
+    Address: string;
+    City: string;
+    State: string;
+    "ZIP Code": number;
+    "County Name": string;
+    "Phone Number": number;
+    "Hospital Type": string;
+    "Hospital Ownership": string;
+    "Emergency Services": string;
+    "Meets criteria for meaningful use of EHRs": string;
+    "Hospital overall rating": number;
+    "Hospital overall rating footnote": string;
+    "Mortality national comparison": string;
+    "Mortality national comparison footnote": string;
+    "Safety of care national comparison": string;
+    "Safety of care national comparison footnote": string;
+    "Readmission national comparison": string;
+    "Readmission national comparison footnote": string;
+    "Patient experience national comparison": string;
+    "Patient experience national comparison footnote": string;
+    "Effectiveness of care national comparison": string;
+    "Effectiveness of care national comparison footnote": string;
+    "Timeliness of care national comparison": string;
+    "Timeliness of care national comparison footnote": string;
+    "Efficient use of medical imaging national comparison": string;
+    "Efficient use of medical imaging national comparison footnote": string;
+}
+export default Hospital;

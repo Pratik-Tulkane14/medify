@@ -117,27 +117,96 @@ body {
   width: 29rem;
   padding-bottom: 1rem;
 }
+.search-wrapper {
+  position: absolute;
+  top: 503px;
+  background-color: #ffff;
+  width: 80vw;
+  margin: 1rem 8rem;
+  padding: 3rem 8rem;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
 .dropdown-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding-left: 16rem;
 }
 .state-wrapper {
   display: flex;
   align-items: center;
   border-radius: 10px;
-  padding: 0.7rem 1rem;
-  background-color: #f0f0f0;
+  padding: 0.3rem 0.7rem;
+  background-color: #f7f7f7;
 }
 .search-icon {
   width: 16px;
   height: 16px;
+  /* background-color: #f4f4f4; */
 }
 #state {
-  background-color: #f0f0f0;
+  background-color: #f7f7f7;
   color: var(--primary-font-color);
   border: none;
   outline: none;
   outline-color: transparent;
   padding: 0.7rem 1rem;
   width: 12rem;
+}
+#city {
+  background-color: #f7f7f7;
+  color: var(--primary-font-color);
+  border: none;
+  outline: none;
+  outline-color: transparent;
+  padding: 0.7rem 1rem;
+  width: 12rem;
+}
+.dept-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.search-heading {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+
+  > p {
+    color: var(--primary-color);
+    font-weight: semi-bold;
+    font-size: 1.1rem;
+  }
+}
+.dept {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+.dept-box:hover {
+  outline: 2px solid var(--primary-bg-color);
+  transition: all 0.3s ease-in;
+  transform: scale(1.03);
+  > p {
+    color: var(--primary-bg-color);
+  }
+}
+.dept-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 1rem 3rem;
+  > img {
+    width: 90px;
+  }
+  > p {
+    color: var(--primary-font-color);
+    text-wrap: nowrap;
+  }
 }
 /* Swipper section start */
 /* .swipper-wrapper{
@@ -149,7 +218,7 @@ body {
   align-items: center;
   background-color: var(--primary-bg-color);
   border-radius: 10px;
-  width: 80px;
+  width: 95px;
   height: 40px;
   padding: 1rem 1rem;
 }
@@ -158,10 +227,204 @@ body {
   height: 16px;
 }
 .search-icon-btn {
+  font-size: 1rem;
   outline-color: transparent;
   color: #ffff;
   background-color: transparent;
   border-color: transparent;
+  cursor: pointer;
+}
+.hospitals-wrapper {
+  background: var(--primary-bg);
+  display: flex;
+  padding: 1rem 8rem;
+}
+.section {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.hospitals-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.like-icon {
+  width: 1rem;
+}
+.hospital-name {
+  color: var(--primary-bg-color);
+  font-weight: bold;
+}
+.offer-free {
+  color: var(--primary-font-color);
+}
+.offer-price {
+  margin: 0 5px;
+}
+.offer-free {
+  font-weight: bold;
+  color: green;
+}
+.address {
+  display: flex;
+  gap: 0.3rem;
+}
+.location {
+  color: var(--primary-font-color);
+  font-weight: bold;
+}
+.like-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  background-color: green;
+  color: #ffff;
+  border-radius: 5px;
+  width: 3rem;
+  padding: 0 0.5rem;
+}
+.like-count {
+  font-size: 1rem;
+}
+.hospital-details-card {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background-color: #ffff;
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  width: 58vw;
+}
+.hospital-icon-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 3rem;
+  color: var(--primary-font-color);
+  font-size: 1.2rem;
+  width: 100%;
+}
+.hos-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+.like-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.book-btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+.book-btn {
+  color: #ffff;
+  background-color: var(--primary-bg-color);
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  text-wrap: nowrap;
+  outline-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.hospital-img {
+  margin-bottom: 4rem;
+}
+.available {
+  color: green;
+  font-weight: semi-bold;
+}
+.details-hospital {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  > p {
+    font-size: 2rem;
+  }
+}
+.card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.address-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.slots-wrapper {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.slots-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+}
+.left-navigator,
+.right-navigator {
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 1rem;
+  border: 1px solid #e0e0e4;
+}
+.wrapper-slots-time {
+  display: flex;
+  justify-content: space-between;
+}
+.slots-no {
+  color: #00a500;
+}
+.slot-details {
+  cursor: pointer;
+  width: 15rem;
+  padding: 0.6rem 0;
+  border-bottom: 5px solid #f0f0f5;
+}
+
+.slot-details:hover {
+  transition: 0.3s ease-in;
+  border-bottom: 5px solid var(--primary-bg-color);
+}
+.slot-details > p {
+  text-wrap: nowrap;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+.slot-category {
+  color: var(--primary-color);
+}
+.slot-time {
+  color: var(--primary-bg-color);
+  border: 2px solid var(--primary-bg-color);
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  font-weight: semi-bold;
+  letter-spacing: 2px;
+}
+.slots-time {
+  display: flex;
+  gap: 3rem;
+  padding: 1.5rem 0;
+}
+.slots-time:first-child, 
+.slots-time:nth-child(2) {
+  border-bottom: 1px solid #f0f0f5;
 }
 /* Find by specialisation page */
 
@@ -467,7 +730,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-  >img{
+  > img {
     cursor: pointer;
   }
 }
@@ -486,7 +749,7 @@ body {
   justify-content: space-between;
   height: 145px;
 }
-.footer-brand-logo{
+.footer-brand-logo {
   cursor: pointer;
 }
 .media-links {
@@ -698,7 +961,6 @@ body {
     flex-direction: row;
     justify-content: center;
   }
- 
 }
 
 @media only screen and (min-width: 992px) {
@@ -762,7 +1024,7 @@ body {
   .img-wrapper {
     height: 480px;
   }
-     .left-download-section {
+  .left-download-section {
     display: block;
   }
 }
@@ -779,6 +1041,17 @@ body {
   }
   .blog-card {
     max-width: 364.7px;
+  }
+  .details-hospital {
+    align-items: flex-start;
+    > p {
+      font-size: 1.5rem;
+    }
+    .hospital-icon-check {
+      justify-content: flex-start;
+      gap: 1rem;
+      padding: 0.8rem 0rem;
+    }
   }
 }
 

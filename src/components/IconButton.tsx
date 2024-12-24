@@ -1,9 +1,12 @@
 import searchIcon from "/search-white.png"
-const IconButton:React.FC = () => {
+interface IconButtonProps{
+  handleClick:()=>Promise<void>
+}
+const IconButton = ({ handleClick }: IconButtonProps) => {
   return (
     <div className="button-wrapper">
         <img src={searchIcon} className="btn-img"  alt="searchIcon" />
-        <button type="submit" className="search-icon-btn">search</button>
+      <button onClick={handleClick} className="search-icon-btn">Search</button>
     </div>
   )
 }

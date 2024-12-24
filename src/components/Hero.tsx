@@ -1,4 +1,5 @@
 // import Search from './Search'
+import Search from './Search'
 import hero from '/doc&sister.png'
 const Hero: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const Hero: React.FC = () => {
           <img src={hero} className='hero-img' alt="hero image" />
         </div>
       </div>
+      <Search/>
       </>
   )
 }
