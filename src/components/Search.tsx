@@ -9,7 +9,9 @@ import Hospital from "/Hospital.png";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import BASE_URL from "../env";
+import { useNavigate } from "react-router";
 const Search: React.FC = () => {
+  const navigate = useNavigate();
   const [state, setState] = useState("");
   const [city, setCity] = useState("");
   const [stateList, setStateList] = useState([]);
@@ -34,6 +36,11 @@ const Search: React.FC = () => {
     const result = await axios.get(
       `${BASE_URL}/data?state=${state}&city=${city}`
     );
+    navigate("/find-doctors",{
+      state:{
+        hospitalData:result.data
+      }
+    })
     setHospitalsList(result.data);
   };
   useEffect(() => {
@@ -100,35 +107,6 @@ const Search: React.FC = () => {
               })}
             </div>
           </div> : null}
-        {/* // :
-          // <div className="hospitals">
-          //   <div className="">
-          //     <p>{hospitalsList?.length} medical centers available in Alaska</p>
-          //     <p>
-          //       <span>
-          //         <img src={check} alt="check" />
-          //       </span>
-          //       Book appointments with minimum wait-time & verified doctor details
-          //     </p>
-          //     <div className="hospitals-cards">
-          //       {hospitalsList.map((item) => {
-          //         return (
-
-          //           <div key={item['Provider ID']} className="hospital-details-card">
-          //             <img src={hospitalIcon} alt="hospitalIcon" />
-          //             <p>{item['Hospital Name']}</p>
-          //             <p>{item?.City}</p>
-          //             <p>{item?.State}</p>
-          //             <p>{item['Hospital Type']}</p>
-          //             <p>{item['Hospital overall rating']}</p>
-
-          //           </div>
-          //         )
-
-          //       })}
-          //     </div>
-          //   </div>
-          // </div>} */}
       </div>
     </>
   );

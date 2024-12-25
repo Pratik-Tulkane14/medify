@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import hospitalIcon from "/hospitalIcon.png";
 import check from "/checkwhite.png";
 import freeAppointment from "/freeAppointment.png";
@@ -6,104 +6,29 @@ import like from "/like.svg";
 import lessthan from "/lessthan.svg";
 import greaterthan from "/greaterthan.svg";
 import Hospital from '../interfaces/Hospital';
+import { useLocation } from 'react-router';
 const Hospitals = () => {
-    const [hospitalsList, setHospitalsList] = useState<Hospital[]>([
-        {
-            "Provider ID": 190045,
-            "Hospital Name": "ST TAMMANY PARISH HOSPITAL",
-            "Address": "1202 S TYLER STREET",
-            "City": "COVINGTON",
-            "State": "Louisiana",
-            "ZIP Code": 70433,
-            "County Name": "SAINT TAMMANY",
-            "Phone Number": 9858984000,
-            "Hospital Type": "Acute Care Hospitals",
-            "Hospital Ownership": "Government - Hospital District or Authority",
-            "Emergency Services": "Yes",
-            "Meets criteria for meaningful use of EHRs": "Y",
-            "Hospital overall rating": 4,
-            "Hospital overall rating footnote": "",
-            "Mortality national comparison": "Above the national average",
-            "Mortality national comparison footnote": "",
-            "Safety of care national comparison": "Above the national average",
-            "Safety of care national comparison footnote": "",
-            "Readmission national comparison": "Above the national average",
-            "Readmission national comparison footnote": "",
-            "Patient experience national comparison": "Above the national average",
-            "Patient experience national comparison footnote": "",
-            "Effectiveness of care national comparison": "Same as the national average",
-            "Effectiveness of care national comparison footnote": "",
-            "Timeliness of care national comparison": "Same as the national average",
-            "Timeliness of care national comparison footnote": "",
-            "Efficient use of medical imaging national comparison": "Below the national average",
-            "Efficient use of medical imaging national comparison footnote": ""
-        },
-        {
-            "Provider ID": 190177,
-            "Hospital Name": "LAKEVIEW REGIONAL MEDICAL CENTER",
-            "Address": "95 JUDGE TANNER BOULEVARD",
-            "City": "COVINGTON",
-            "State": "Louisiana",
-            "ZIP Code": 70433,
-            "County Name": "SAINT TAMMANY",
-            "Phone Number": 9858674443,
-            "Hospital Type": "Acute Care Hospitals",
-            "Hospital Ownership": "Proprietary",
-            "Emergency Services": "Yes",
-            "Meets criteria for meaningful use of EHRs": "Y",
-            "Hospital overall rating": 3,
-            "Hospital overall rating footnote": "",
-            "Mortality national comparison": "Same as the national average",
-            "Mortality national comparison footnote": "",
-            "Safety of care national comparison": "Below the national average",
-            "Safety of care national comparison footnote": "",
-            "Readmission national comparison": "Same as the national average",
-            "Readmission national comparison footnote": "",
-            "Patient experience national comparison": "Same as the national average",
-            "Patient experience national comparison footnote": "",
-            "Effectiveness of care national comparison": "Same as the national average",
-            "Effectiveness of care national comparison footnote": "",
-            "Timeliness of care national comparison": "Above the national average",
-            "Timeliness of care national comparison footnote": "",
-            "Efficient use of medical imaging national comparison": "Below the national average",
-            "Efficient use of medical imaging national comparison footnote": ""
-        },
-        {
-            "Provider ID": 190267,
-            "Hospital Name": "FAIRWAY MEDICAL CENTER",
-            "Address": "67252 INDUSTRY LANE",
-            "City": "COVINGTON",
-            "State": "Louisiana",
-            "ZIP Code": 70433,
-            "County Name": "SAINT TAMMANY",
-            "Phone Number": 9858016252,
-            "Hospital Type": "Acute Care Hospitals",
-            "Hospital Ownership": "Physician",
-            "Emergency Services": "No",
-            "Meets criteria for meaningful use of EHRs": "Y",
-            "Hospital overall rating": 5,
-            "Hospital overall rating footnote": "There are too few measures or measure groups reported to calculate a star rating or measure group score",
-            "Mortality national comparison": "Not Available",
-            "Mortality national comparison footnote": "Results are not available for this reporting period",
-            "Safety of care national comparison": "Not Available",
-            "Safety of care national comparison footnote": "Results are not available for this reporting period",
-            "Readmission national comparison": "Not Available",
-            "Readmission national comparison footnote": "Results are not available for this reporting period",
-            "Patient experience national comparison": "Not Available",
-            "Patient experience national comparison footnote": "Results are not available for this reporting period",
-            "Effectiveness of care national comparison": "Same as the national average",
-            "Effectiveness of care national comparison footnote": "",
-            "Timeliness of care national comparison": "Not Available",
-            "Timeliness of care national comparison footnote": "Results are not available for this reporting period",
-            "Efficient use of medical imaging national comparison": "Not Available",
-            "Efficient use of medical imaging national comparison footnote": "Results are not available for this reporting period"
-        }]);
+    const location = useLocation();
+    const data = location.state as { hospitalData: Hospital; };
+    console.log(data, "data");
+
+    const [hospitalsList, setHospitalsList] = useState<Hospital[]>([]);
+    useEffect(() => {
+        if (data) {
+            setHospitalsList(data?.hospitalData)
+        }
+    }, [])
     return (
         <div className="hospitals-wrapper">
             <div className="hospitals">
                 <div className="details-hospital">
 
-                    <p>{hospitalsList?.length} medical centers available in Alaska</p>
+                    <p>{hospitalsList?.length} medical centers available in
+                        <span className='area-name'>
+
+                            {hospitalsList[0]?.City}
+                        </span>
+                    </p>
                     <div className="hospital-icon-check">
                         <img src={check} alt="check" />
                         <p>
@@ -210,9 +135,9 @@ const Hospitals = () => {
                                     <div className="">
                                         <p className='slot-time'>02.00PM</p>
                                     </div>
-                                    <div className="">
+                                    {/* <div className="">
                                         <p className='slot-time'>02:30PM</p>
-                                    </div>
+                                    </div> */}
                                 </div>
                                 <div className="slots-time">
                                     <div className="">

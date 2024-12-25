@@ -53,7 +53,9 @@ const Navbar: React.FC = () => {
                             )
                         })}
                         <button className="my-booking-btn">
-                            My Bookings
+                            <NavLink to="/my-bookings" className={"my-bookings"}>
+                                My Bookings
+                            </NavLink>
                         </button>
                     </nav>
                 </div>

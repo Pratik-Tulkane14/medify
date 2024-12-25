@@ -1,36 +1,44 @@
-import { Outlet } from "react-router"
-import Blog from "./components/Blog"
-import Download from "./components/Download"
-import Families from "./components/Families"
-import Faq from "./components/Faq"
-import Footer from "./components/Footer"
-import Hero from "./components/Hero"
-import Hospitals from "./components/Hospitals"
-import MedicalSpecialist from "./components/MedicalSpecialist"
-import Navbar from "./components/Navbar"
-import Notice from "./components/Notice"
-import Offers from "./components/Offers"
-import PatientCaring from "./components/PatientCaring"
-import Specialisation from "./components/Specialisation"
+import React from 'react';
+import { RouterProvider, createBrowserRouter, Outlet } from 'react-router';
 
-function App() {
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
+import Faq from './components/Faq';
+import Hero from './components/Hero';
+import Specialisation from './components/Specialisation';
+import Hospitals from './components/Hospitals';
+import Download from './components/Download';
+import Families from './components/Families';
+import Router from './router/router';
 
+const AppLayout: React.FC = () => {
   return (
-    <>
-      <Notice />
+    <div>
       <Navbar />
-      <Hero />
-      <Offers />
-      <Specialisation />
-      <Blog />
-      <Families />
-      <MedicalSpecialist />
-      <PatientCaring />
-      <Hospitals/>
-      <Outlet/>
-     
-    </>
-  )
-}
+      <main >
+        <Outlet />
+      </main>
+      <Faq />
+      <Download />
+      <Footer />
+    </div>
+  );
+};
 
-export default App
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <AppLayout />,
+    children: [
+      { path: '/', element: <Router /> },
+      { path: '/find-doctors', element: <Hospitals /> },
+      { path: '/my-bookings', element: <Hospitals /> },
+    ],
+  },
+]);
+
+const App: React.FC = () => {
+  return <RouterProvider router={router} />;
+};
+
+export default App;
