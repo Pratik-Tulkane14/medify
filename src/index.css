@@ -49,24 +49,42 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 2rem 8rem;
+  align-items: center;
+  padding: 0rem 8rem;
   background: var(--primary-bg);
-}
-.nav-left-section {
 }
 .nav-right-section {
   display: flex;
 }
 .nav-list {
   display: flex;
-  gap: 40px;
-  list-style: none;
-
-  > li {
-    color: var(--primary-color);
-  }
+  gap: 20px;
 }
-.my-booking-btn,
+.nav-item,
+.active {
+  text-decoration: none;
+  color: var(--primary-color);
+  padding: 2rem;
+  box-sizing: border-box;
+  border-bottom: 4px solid transparent;
+  transition: color 0.3s ease-in, border-color 0.3s ease-in;
+}
+.nav-item:hover {
+  color: var(--primary-bg-color);
+  transition: 0.3s all ease-in;
+  border-bottom: 4px solid var(--primary-bg-color);
+}
+.my-booking-btn {
+  color: #ffff;
+  background-color: var(--primary-bg-color);
+  border-radius: 5px;
+  text-wrap: nowrap;
+  margin: 1.2rem 1rem;
+  padding: 0.3rem 1.7rem;
+  font-size: 0.9rem;
+  border-color: transparent;
+  cursor: pointer;
+}
 .view-all {
   color: #ffff;
   background-color: var(--primary-bg-color);
@@ -422,7 +440,7 @@ body {
   gap: 3rem;
   padding: 1.5rem 0;
 }
-.slots-time:first-child, 
+.slots-time:first-child,
 .slots-time:nth-child(2) {
   border-bottom: 1px solid #f0f0f5;
 }

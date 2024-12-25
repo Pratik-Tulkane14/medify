@@ -1,3 +1,4 @@
+import { Outlet } from "react-router"
 import Blog from "./components/Blog"
 import Download from "./components/Download"
 import Families from "./components/Families"
@@ -18,17 +19,16 @@ function App() {
     <>
       <Notice />
       <Navbar />
-      {/* <Hero /> */}
-      <Hospitals/>
-      {/* <Offers />
+      <Hero />
+      <Offers />
       <Specialisation />
       <Blog />
       <Families />
-      <Faq />
       <MedicalSpecialist />
       <PatientCaring />
-      <Download />
-      <Footer /> */}
+      <Hospitals/>
+      <Outlet/>
+     
     </>
   )
 }
