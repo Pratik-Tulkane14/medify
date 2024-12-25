@@ -4,7 +4,6 @@ import ambulance from "/ambulance.png";
 import capsule from "/capsule.png";
 import Doctor from "/Doctor.png";
 import Drugstore from "/Drugstore.png";
-import hospitalIcon from "/hospitalIcon.png";
 import Hospital from "/Hospital.png";
 import { useEffect, useState } from "react";
 import axios from "axios";

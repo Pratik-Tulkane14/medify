@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import hospitalIcon from "/hospitalIcon.png";
 import check from "/checkwhite.png";
 import freeAppointment from "/freeAppointment.png";
@@ -10,12 +10,12 @@ import { useLocation } from 'react-router';
 const Hospitals = () => {
     const location = useLocation();
     const data = location.state as { hospitalData: Hospital; };
-    console.log(data, "data");
-
+    console.log(data,"data");
+    
     const [hospitalsList, setHospitalsList] = useState<Hospital[]>([]);
     useEffect(() => {
         if (data) {
-            setHospitalsList(data?.hospitalData)
+            setHospitalsList(data.hospitalData)
         }
     }, [])
     return (
