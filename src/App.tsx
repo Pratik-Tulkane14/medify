@@ -2,12 +2,11 @@ import React from "react";
 import { RouterProvider, createBrowserRouter, Outlet } from "react-router";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import Faq from "./components/Faq";
 import Hospitals from "./components/Hospitals";
 import Download from "./components/Download";
-import Router from "./router/router";
 import Mybookings from "./pages/Mybookings";
 import Notice from "./components/Notice";
+import Router from "./router/Router";
 
 const AppLayout: React.FC = () => {
   return (
@@ -17,7 +16,6 @@ const AppLayout: React.FC = () => {
       <main>
         <Outlet />
       </main>
-      <Faq />
       <Download />
       <Footer />
     </div>

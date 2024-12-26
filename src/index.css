@@ -58,6 +58,7 @@ body {
 }
 .nav-list {
   display: flex;
+  align-items: center;
   gap: 20px;
 }
 .nav-item {
@@ -67,6 +68,37 @@ body {
   box-sizing: border-box;
   border-bottom: 4px solid transparent;
   transition: color 0.3s ease-in, border-color 0.3s ease-in;
+}
+.booking-search-wrapper {
+  position: relative;
+  background: linear-gradient(91.75deg, #2aa7ff 1.4%, #0c8ce6 100.57%);
+  padding: 1rem 8rem;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.booking-heading {
+  color: #ffff;
+  font-size: 3rem;
+}
+.booking-search-section {
+  display: flex;
+  gap: 2rem;
+  background-color: #fff;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  width: 42rem;
+  > input {
+    width: 32rem;
+    border-radius: 5px;
+    outline: none;
+    padding-left: 1.5rem;
+    border-color:2px solid var(--primary-font-color);
+  }
+}
+.booking-wrapper {
+  position: absolute;
+  top: 54px;
+  right: 140px;
 }
 .active {
   text-decoration: none;
@@ -84,15 +116,16 @@ body {
 .my-bookings {
   text-decoration: none;
   color: #ffff;
-  border-bottom: transparent;
+  border-bottom: none;
 }
 .my-booking-btn {
+  text-decoration: none;
   color: #ffff;
   background-color: var(--primary-bg-color);
   border-radius: 5px;
   text-wrap: nowrap;
   margin: 1.2rem 1rem;
-  padding: 0.3rem 1.7rem;
+  padding: 0.7rem 1.7rem;
   font-size: 0.9rem;
   border-color: transparent;
   cursor: pointer;
@@ -459,17 +492,17 @@ body {
   letter-spacing: 2px;
   height: 2.5rem;
 }
-.slot-date{
- color: #00A500;
-  border: 2px solid #00A500;
+.slot-date {
+  color: #00a500;
+  border: 2px solid #00a500;
   padding: 0.4rem 1rem;
   border-radius: 5px;
   font-weight: 500;
   text-wrap: nowrap;
 }
-.booking-slot-date{
- color: #00A500;
-  border: 2px solid #00A500;
+.booking-slot-date {
+  color: #00a500;
+  border: 2px solid #00a500;
   padding: 0.4rem 1rem;
   border-radius: 5px;
   font-weight: 500;
@@ -738,6 +771,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 0rem 1rem;
+  padding-bottom: 2rem;
   align-items: center;
   gap: 5rem;
 }
@@ -856,9 +890,13 @@ body {
   margin-top: 3rem;
   color: #fff;
 }
-.my-bookings-wrapper{
+.bookings-section {
+  background: var(--primary-bg);
+}
+.my-bookings-wrapper {
   display: flex;
   gap: 1rem;
+  margin-top: 3rem;
   background: var(--primary-bg);
   padding: 2rem 8rem;
 }
@@ -904,8 +942,8 @@ body {
 .left-section > img {
   width: 90vw;
 }
-.area-name{
-  margin-left:0.5rem ;
+.area-name {
+  margin-left: 0.5rem;
   text-transform: lowercase;
 }
 .faqs {
@@ -1045,8 +1083,8 @@ body {
 @media only screen and (min-width: 992px) {
   .custom-swipper-wrapper {
     padding: 2rem 6.5rem;
-    margin-top: 8rem ;
-    margin-bottom: 3rem ;
+    margin-top: 8rem;
+    margin-bottom: 3rem;
   }
   .patient-caring {
     gap: 2rem;

@@ -1,33 +1,7 @@
 import { Link, NavLink } from "react-router";
 import brandLogo from "/brandLogo.svg";
+import NavArray from "../constants/NavArray";
 const Navbar: React.FC = () => {
-    const navArray = [
-        {
-            id: 1,
-            name: 'Find Doctors',
-            link: '/find-doctors'
-        },
-        {
-            id: 2,
-            name: 'Medicines',
-            link: '/medicines'
-        },
-        {
-            id: 3,
-            name: 'Surgeires',
-            link: '/surgeires'
-        },
-        {
-            id: 4,
-            name: 'Software for Provider',
-            link: '/software-for-provider'
-        },
-        {
-            id: 5,
-            name: 'Facilities',
-            link: '/facilities'
-        },
-    ]
     return (
         <>
             <div className="navbar">
@@ -39,7 +13,7 @@ const Navbar: React.FC = () => {
                 <div className="nav-right-section">
 
                     <nav className="nav-list">
-                        {navArray.map((item) => {
+                        {NavArray.map((item) => {
                             return (
                                 <NavLink
                                     key={item.id}
@@ -52,11 +26,11 @@ const Navbar: React.FC = () => {
                                 </NavLink>
                             )
                         })}
-                        <button className="my-booking-btn">
-                            <NavLink to="/my-bookings" className={"my-bookings"}>
+                        <NavLink to="/my-bookings" className="my-booking-btn">
+                            <span className={"my-bookings"}>
                                 My Bookings
-                            </NavLink>
-                        </button>
+                            </span>
+                    </NavLink>
                     </nav>
                 </div>
             </div>
