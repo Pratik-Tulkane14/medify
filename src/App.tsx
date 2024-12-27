@@ -15,10 +15,10 @@ const AppLayout: React.FC = () => {
     <div >
       <Notice />
       {isMobileNavVisible ?
-        <MobileNavbar isMobileNavVisible={isMobileNavVisible} setIsMobileNavVisible={setIsMobileNavVisible} />
-      :  <Navbar setIsMobileNavVisible={setIsMobileNavVisible} /> 
+        <MobileNavbar setIsMobileNavVisible={setIsMobileNavVisible} />
+        : <Navbar setIsMobileNavVisible={setIsMobileNavVisible} />
       }
-       <main>
+      <main>
         <Outlet />
       </main>
       <Download />

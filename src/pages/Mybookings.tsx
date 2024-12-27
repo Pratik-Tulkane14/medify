@@ -8,7 +8,7 @@ const Mybookings = () => {
         <div className="bookings-section">
             <BookingSeach />
             <div className="my-bookings-wrapper">
-                <div className="hospitals-cards">
+                <div className="booking-hospitals-cards">
                     {mybookings?.map((item) => {
                         return (
                             <div key={item["Provider ID"]} className="hospital-details-card">

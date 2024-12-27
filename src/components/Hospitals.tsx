@@ -110,7 +110,7 @@ const Hospitals = () => {
                                         <img src={greaterthan} alt="leftarrow" />
                                     </div>
                                 </div>
-                                <div className="slots-wrapper">
+                                <div className="slots-wrapper-inner">
                                     <div className="slots-time">
                                         <div className="">
                                             <p className='slot-category'> Morning</p>

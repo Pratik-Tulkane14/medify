@@ -4,10 +4,9 @@ import brandLogo from "/brandLogo.svg";
 import { Link, NavLink } from 'react-router';
 import NavArray from '../constants/NavArray';
 interface MobileNavbarProps {
-    isMobileNavVisible: boolean,
     setIsMobileNavVisible: React.Dispatch<React.SetStateAction<boolean>>;
 }
-const MobileNavbar = ({ isMobileNavVisible, setIsMobileNavVisible }: MobileNavbarProps) => {
+const MobileNavbar = ({ setIsMobileNavVisible }: MobileNavbarProps) => {
     return (
         <div className="ph-nav">
             <div className="ph-nav-wrapper">
