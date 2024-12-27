@@ -759,7 +759,7 @@ body {
   font-size: 2rem;
 }
 .medical-staff {
-  padding: 0rem 1rem;
+  padding:  1rem;
 }
 /* Download section start here */
 .left-download-section {
@@ -1464,7 +1464,8 @@ body {
     flex-direction: row;
   }
   .search-wrapper {
-    width: 65%;
+    width: 82%;
+    max-width: 103.5rem;
   }
   .hospitals-cards {
     width: 100%;
