@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import 'swiper/css/pagination';
+// import 'swiper/css/pagination';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import offersData from "../constants/offersData";
 const CustomSwipper: React.FC = () => {
