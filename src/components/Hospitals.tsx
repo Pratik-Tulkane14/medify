@@ -115,28 +115,32 @@ const Hospitals = () => {
                                         <div className="">
                                             <p className='slot-category'> Morning</p>
                                         </div>
-                                        <div className="">
-                                            <p className='slot-time'>11:30AM</p>
+                                        <div className="time">
+                                            <div className="">
+                                                <p className='slot-time'>11:30AM</p>
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="slots-time">
                                         <div className="">
                                             <p className='slot-category'> Afternoon</p>
                                         </div>
-                                        <div className="">
-                                            <p className='slot-time'>12.00PM</p>
-                                        </div>
-                                        <div className="">
-                                            <p className='slot-time'>12:30PM</p>
-                                        </div>
-                                        <div className="">
-                                            <p className='slot-time'>01.00PM</p>
-                                        </div>
-                                        <div className="">
-                                            <p className='slot-time'>01:30PM</p>
-                                        </div>
-                                        <div className="">
-                                            <p className='slot-time'>02.00PM</p>
+                                        <div className="time">
+                                            <div className="">
+                                                <p className='slot-time'>12.00PM</p>
+                                            </div>
+                                            <div className="">
+                                                <p className='slot-time'>12:30PM</p>
+                                            </div>
+                                            <div className="">
+                                                <p className='slot-time'>01.00PM</p>
+                                            </div>
+                                            <div className="">
+                                                <p className='slot-time'>01:30PM</p>
+                                            </div>
+                                            <div className="">
+                                                <p className='slot-time'>02.00PM</p>
+                                            </div>
                                         </div>
                                         {/* <div className="">
                                         <p className='slot-time'>02:30PM</p>
@@ -146,18 +150,22 @@ const Hospitals = () => {
                                         <div className="">
                                             <p className='slot-category'> Evening</p>
                                         </div>
-                                        <div className="">
-                                            <p className='slot-time'>06.00PM</p>
+                                        <div className="time">
+
+                                            <div className="">
+                                                <p className='slot-time'>06.00PM</p>
+                                            </div>
+                                            <div className="">
+                                                <p className='slot-time'>06:30PM</p>
+                                            </div>
+                                            <div className="">
+                                                <p className='slot-time'>07.00PM</p>
+                                            </div>
+                                            <div className="">
+                                                <p className='slot-time'>07:30PM</p>
+                                            </div>
                                         </div>
-                                        <div className="">
-                                            <p className='slot-time'>06:30PM</p>
-                                        </div>
-                                        <div className="">
-                                            <p className='slot-time'>07.00PM</p>
-                                        </div>
-                                        <div className="">
-                                            <p className='slot-time'>07:30PM</p>
-                                        </div>
+
                                     </div>
                                 </div>
                             </div>

@@ -1,7 +1,11 @@
 import { Link, NavLink } from "react-router";
 import brandLogo from "/brandLogo.svg";
+import hamburger from "/hamburger.svg";
 import NavArray from "../constants/NavArray";
-const Navbar: React.FC = () => {
+interface NavbarProps {
+    setIsMobileNavVisible: React.Dispatch<React.SetStateAction<boolean>>;
+}
+const Navbar = ({ setIsMobileNavVisible }: NavbarProps) => {
     return (
         <>
             <div className="navbar">
@@ -32,6 +36,11 @@ const Navbar: React.FC = () => {
                             </span>
                     </NavLink>
                     </nav>
+                </div>
+                <div className="hamburger-section">
+                    <img className="hamburger"
+                        onClick={() => setIsMobileNavVisible(true)}
+                    src={hamburger} alt="menu-icon" />
                 </div>
             </div>
         </>

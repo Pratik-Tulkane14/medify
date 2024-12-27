@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { RouterProvider, createBrowserRouter, Outlet } from "react-router";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -7,13 +7,18 @@ import Download from "./components/Download";
 import Mybookings from "./pages/Mybookings";
 import Notice from "./components/Notice";
 import Router from "./router/Router";
+import MobileNavbar from "./components/MobileNavbar";
 
 const AppLayout: React.FC = () => {
+  const [isMobileNavVisible, setIsMobileNavVisible] = useState<boolean>(false);
   return (
-    <div>
+    <div >
       <Notice />
-      <Navbar />
-      <main>
+      {isMobileNavVisible ?
+        <MobileNavbar isMobileNavVisible={isMobileNavVisible} setIsMobileNavVisible={setIsMobileNavVisible} />
+      :  <Navbar setIsMobileNavVisible={setIsMobileNavVisible} /> 
+      }
+       <main>
         <Outlet />
       </main>
       <Download />
