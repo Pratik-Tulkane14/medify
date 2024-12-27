@@ -1,7 +1,4 @@
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
-import "swiper/css";
 import 'swiper/css/pagination';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import offersData from "../constants/offersData";
@@ -15,7 +12,7 @@ const CustomSwipper: React.FC = () => {
           delay: 2500,
           disableOnInteraction: false,
         }}
-        spaceBetween={30} // Reduced from 100 for better mobile layout
+        spaceBetween={30} 
         pagination={true}
         modules={[Autoplay, Pagination, Navigation]}
         breakpoints={{
