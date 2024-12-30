@@ -5,7 +5,7 @@
     { "path": "./tsconfig.node.json" }
   ],
  "compilerOptions": {
-    "moduleResolution": "node",
-    "typeRoots": ["./node_modules/@types"]
-  }
+    "typeRoots": ["./node_modules/@types", "./types"],
+    "types": ["swiper"],
+  },
 }
